@@ -1,0 +1,13 @@
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\bin\Debug\JuegoDeLaOca.exe.config
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\bin\Debug\JuegoDeLaOca.exe
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\bin\Debug\JuegoDeLaOca.pdb
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.csprojAssemblyReference.cache
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.Form1.resources
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.Properties.Resources.resources
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.csproj.GenerateResource.cache
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.exe
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.pdb
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.Tablero.resources
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.Resource1.resources
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.frmDice.resources
+C:\Users\juand\OneDrive\Documents\UdeM\3er Semestre\SIO\Juego de la Oca\Programa\JuegoDeLaOca\JuegoDeLaOca\obj\Debug\JuegoDeLaOca.Pregunta.resources
