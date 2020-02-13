@@ -25,7 +25,6 @@ namespace JuegoDeLaOca
         private void btnComenzar_Click(object sender, EventArgs e)
         {
             List<Jugador> jugadores = new List<Jugador>();
-            Tablero tablero = new Tablero(jugadores);
             if (opt1.Checked)
             {
                 jugadores.Add(new Jugador("Jugador 1"));
@@ -54,6 +53,7 @@ namespace JuegoDeLaOca
             }
             if(jugadores.Count() > 0)
             {
+                Tablero tablero = new Tablero(jugadores);
                 this.Hide();
                 tablero.Show();
             }

@@ -63,6 +63,76 @@ namespace JuegoDeLaOca {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FichaAzul {
+            get {
+                object obj = ResourceManager.GetObject("FichaAzul", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FichaAzul1 {
+            get {
+                object obj = ResourceManager.GetObject("FichaAzul1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FichaAzul2 {
+            get {
+                object obj = ResourceManager.GetObject("FichaAzul2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FichaNegra {
+            get {
+                object obj = ResourceManager.GetObject("FichaNegra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FichaNegra1 {
+            get {
+                object obj = ResourceManager.GetObject("FichaNegra1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FIchaRoja {
+            get {
+                object obj = ResourceManager.GetObject("FIchaRoja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FichaVerde {
+            get {
+                object obj = ResourceManager.GetObject("FichaVerde", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap five {
             get {
                 object obj = ResourceManager.GetObject("five", resourceCulture);
@@ -106,6 +176,16 @@ namespace JuegoDeLaOca {
         internal static System.Drawing.Bitmap Tablero {
             get {
                 object obj = ResourceManager.GetObject("Tablero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tablero1 {
+            get {
+                object obj = ResourceManager.GetObject("Tablero1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -138,5 +138,29 @@
   <ItemGroup>
     <None Include="Resources\dice-six-faces-one.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FichaAzul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FichaNegra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIchaRoja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FichaVerde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FichaAzul1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FichaAzul2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FichaNegra1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tablero1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,17 +8,19 @@ namespace JuegoDeLaOca
 {
     public class Jugador
     {
-        int[] VecposX = new int[] { 140, 304, 468, 612, 756 };
+        int[] VecposX = new int[] { 120, 270, 418, 562, 726 };
         int[] VecposY = new int[] { 412, 345, 275, 205, 138, 70 };
         public int[,] Tablero = new int[,] { { 30, 29, 28, 27, 26 },
-                                      { 21, 22, 23, 24, 25 }, 
-                                      { 20, 19, 18, 17, 16 }, 
-                                      { 11, 12, 13, 14, 15 }, 
-                                      { 10, 9, 8, 7, 6 }, 
-                                      { 1, 2, 3, 4, 5 } }; 
+                                             { 21, 22, 23, 24, 25 }, 
+                                             { 20, 19, 18, 17, 16 }, 
+                                             { 11, 12, 13, 14, 15 }, 
+                                             { 10, 9, 8, 7, 6 }, 
+                                             { 1, 2, 3, 4, 5 } };
+        bool oca = false;
+        bool penalizado = false;
         int posX;
         int posY;
-        
+        bool pierdeTurno = false;
         String nombre;
         int pos = 0;
         public Jugador(String nombre)
@@ -78,5 +80,8 @@ namespace JuegoDeLaOca
         public int Pos { get => pos; set => pos = value; }
         public int PosX { get => posX; set => posX = value; }
         public int PosY { get => posY; set => posY = value; }
+        public bool PierdeTurno { get => pierdeTurno; set => pierdeTurno = value; }
+        public bool Oca { get => oca; set => oca = value; }
+        public bool Penalizado { get => penalizado; set => penalizado = value; }
     }
 }

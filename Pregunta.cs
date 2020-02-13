@@ -76,5 +76,9 @@ namespace JuegoDeLaOca
         {
             this.Dispose();
         }
+
+        private void Pregunta_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
     }
 }

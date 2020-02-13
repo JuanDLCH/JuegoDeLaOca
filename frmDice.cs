@@ -48,8 +48,8 @@ namespace JuegoDeLaOca
         private void timer1_Tick(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            setImage(rnd.Next(1,6));
-            if(ticks <= 20)
+            setImage(rnd.Next(1,7));
+            if(ticks <= 40)
             {
                 ticks++;
             }
@@ -65,6 +65,10 @@ namespace JuegoDeLaOca
         {
             timer2.Stop();
             this.Close();
+        }
+
+        private void frmDice_FormClosed(object sender, FormClosedEventArgs e)
+        {
         }
     }
 }
