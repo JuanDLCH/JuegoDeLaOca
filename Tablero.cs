@@ -267,8 +267,21 @@ namespace JuegoDeLaOca
 
         void mostrarPregunta()
         {
+            Pregunta pregunta = new Pregunta(new Question("","","","","",""));
             int num = rnd.Next(0, BancoPreguntas.Count);
-            Pregunta pregunta = new Pregunta(BancoPreguntas[num]);
+            if (BancoPreguntas.Count > 0)
+            {
+                pregunta = new Pregunta(BancoPreguntas[num]);
+            }
+            else
+            {
+                DialogResult result;
+                result = MessageBox.Show("Banco de preguntas vacío, nadie gana", "Fin del juego", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                if (result == DialogResult.OK)
+                {
+                    Application.ExitThread();
+                }
+            }
             pregunta.ShowDialog();
             if (pregunta.DialogResult == DialogResult.Yes)
             {
@@ -294,7 +307,7 @@ namespace JuegoDeLaOca
                 {
                     MessageBox.Show("Bien hecho");
                 }
-                //BancoPreguntas.RemoveAt(num);
+                BancoPreguntas.RemoveAt(num);
                 timer1.Start();
                 puedeJugar = true;
                 siguienteTurno();
