@@ -58,5 +58,15 @@ namespace JuegoDeLaOca
                 tablero.Show();
             }
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

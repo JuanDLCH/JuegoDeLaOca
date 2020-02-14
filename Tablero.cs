@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace JuegoDeLaOca
 {
+    //Presentado por Juan Diego Londoño Chavarría y Santiago Cano Duque
     public partial class Tablero : Form
     {
         List<Question> BancoPreguntas = new List<Question>();
@@ -305,7 +306,7 @@ namespace JuegoDeLaOca
                 }
                 else
                 {
-                    MessageBox.Show("Bien hecho");
+                    MessageBox.Show("Bien hecho", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 BancoPreguntas.RemoveAt(num);
                 timer1.Start();
@@ -314,7 +315,7 @@ namespace JuegoDeLaOca
             }
             else
             {
-                MessageBox.Show("Berga wey");
+                MessageBox.Show("Incorrecto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 penalizar(jugadores[turno - 1].Pos);
                 jugadores[turno - 1].Penalizado = true;
                 siguienteTurno();
@@ -343,11 +344,7 @@ namespace JuegoDeLaOca
             mover(turno);
         }
 
-        void anadirPreguntas()
-        {
-            BancoPreguntas.Add(new Question("¿Cuál es la correcta?", "Esta no", "Esta tampoco", "Esta sí", "Esta menos", "Esta no"));
-        }
-
+        
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             if(it % 2 == 0)
@@ -360,5 +357,35 @@ namespace JuegoDeLaOca
             }
             it++;
         }
+        void anadirPreguntas()
+        {
+            BancoPreguntas.Add(new Question("¿Quién era el dios romano de la guerra?", "Ares", "Júpiter", "Marte", "Belerofonte", "Ares"));
+            BancoPreguntas.Add(new Question("Según la leyenda, ¿cómo murió el Papa Adriano IV en 1159?", "Tragándose una mosca", "Cayéndose de un balcón", "Chocándose contra una puerta", "Cayéndose de un caballo", "Tragándose una mosca"));
+            BancoPreguntas.Add(new Question("¿Cuántos tentáculos tiene un calamar?", "4", "8", "10", "20", "8"));
+            BancoPreguntas.Add(new Question("Aproximadamente, ¿qué porcentaje de la superficie de la Tierra es agua?", "50%", "70%", "90%", "10%", "70%"));
+            BancoPreguntas.Add(new Question("¿Cuál es el idioma oficial de Brasil?", "Brasileño", "Francés", "Inglés", "Portugués", "Portugués"));
+            BancoPreguntas.Add(new Question("¿Qué significa “palimpsesto”?", "Un personaje que carece de seriedad", "Razonamiento por el que la verdad de una proposición se prueba demostrando la imposibilidad o absurdo de la proposición contraria",
+                "Algo que sirve como ayuda auxiliar", "Manuscrito cuya escritura ha sido eliminada con objeto de escribir otro texto encima", "Manuscrito cuya escritura ha sido eliminada con objeto de escribir otro texto encima"));
+            BancoPreguntas.Add(new Question("¿En qué año murió Bob Marley?", "1981", "1986", "1991", "2003", "1981"));
+            BancoPreguntas.Add(new Question("Deberíamos tomar antibióticos...", "Para combatir los virus", "Contra las infecciones bacterianas", "Siempre que nos sintamos enfermos", "¡Nunca!", "Contra las infecciones bacterianas"));
+            BancoPreguntas.Add(new Question("¿Cuál es el nombre de la 'herramienta' necesaria para jugar al billar?", "Palo", "Snooker", "Bubingo", "Taco", "Taco"));
+            BancoPreguntas.Add(new Question("¿Por qué es reconocido Serguéi Rajmáninov?", "Por sus contribuciones al mundo de la física cuántica", "Por sus contribuciones al mundo de la música", "Por sus contribuciones al mundo de la pintura", "Por sus contribuciones al mundo de la literatura", "Por sus contribuciones al mundo de la música"));
+            BancoPreguntas.Add(new Question("¿Cuál es el estado estadounidense más cercano a la antigua Unión Soviética?", "Alaska", "Florida", "California", "Texas", "Alaska"));
+            BancoPreguntas.Add(new Question("¿Por qué se llaman lenguas romances el francés, el español y el italiano?", "Porque suenan muy románticas", "Porque fueron difundidas por los trovadores ambulantes", "Porque encuentran sus raíces en el latín, hablado por los romanos", "Porque inicialmente eran habladas solo por los romaníes", "Porque encuentran sus raíces en el latín, hablado por los romanos"));
+            BancoPreguntas.Add(new Question("¿Qué parte del cuerpo produce insulina?", "El páncreas", "El hígado", "El bazo", "El timo", "El páncreas"));
+            BancoPreguntas.Add(new Question("¿Qué animal es la drosophila?", "Una rata", "Una mosca", "Un conejillo de Indias", "Una cabra", "Una mosca"));
+            BancoPreguntas.Add(new Question("¿Cuántas sílabas forman un haiku?", "14", "15", "16", "17", "17"));
+            BancoPreguntas.Add(new Question("¿Qué objeto se convirtió en el símbolo de la película de animación “Akira”?", "Un coche azul", "Una ametralladora", "Una motocicleta roja", "Una espada dorada", "Una motocicleta roja"));
+            BancoPreguntas.Add(new Question("Última letra del alfabeto griego", "Omega", "Alpha", "Zeta", "Beta", "Omega"));
+            BancoPreguntas.Add(new Question(" Reptil cuya piel cambia de color", "Cobra", "Iguana", " Camaleón", "Lagarto", " Camaleón"));
+            BancoPreguntas.Add(new Question("Ciudad italiana conocida como La Novia del Mar", "Roma", "Venecia", "Florencia", "Marselle", "Venecia "));
+            BancoPreguntas.Add(new Question("Número de años que debes tener de casado para festejar tus bodas de oro", "25", "50", "60", "80", "50"));
+            BancoPreguntas.Add(new Question("Horas que, en promedio, duerme al día un gato", "12", "13", "14", "15", "14"));
+            BancoPreguntas.Add(new Question("Órgano del cuerpo que produce la bilis", "Hígado", "Páncreas", "Riñón", "Corazón", "Hígado"));
+            BancoPreguntas.Add(new Question("Década en que se terminó de construir el Empire State de Nueva York", "Cincuenta", "Cuarenta", "Treinta", "Veinte", "Treinta"));
+            BancoPreguntas.Add(new Question("Es la bebida alcohólica más importante de Japón, destilada del arroz", "Umeshu", "Sake", "Awamori", "Isinori", "Sake"));
+            BancoPreguntas.Add(new Question("¿En qué país se encuentra la Torre de Pissa?", "Gran Bretaña", "España", "Francía", "Italia", "Italia"));
+        }
+
     }
 }

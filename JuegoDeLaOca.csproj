@@ -118,9 +118,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Tablero.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\dice-six-faces-two.png" />
   </ItemGroup>
   <ItemGroup>
@@ -151,16 +148,10 @@
     <None Include="Resources\FichaVerde.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FichaAzul1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FichaAzul2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FichaNegra1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Tablero1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

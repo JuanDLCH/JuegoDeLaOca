@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgJug1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgJug2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgJug3)).BeginInit();
@@ -64,7 +65,7 @@
             // imgJug2
             // 
             this.imgJug2.BackColor = System.Drawing.Color.Transparent;
-            this.imgJug2.Image = global::JuegoDeLaOca.Resource1.FichaAzul1;
+            this.imgJug2.Image = global::JuegoDeLaOca.Resource1.FichaAzul;
             this.imgJug2.Location = new System.Drawing.Point(155, 507);
             this.imgJug2.Name = "imgJug2";
             this.imgJug2.Size = new System.Drawing.Size(119, 79);
@@ -86,7 +87,7 @@
             // imgJug4
             // 
             this.imgJug4.BackColor = System.Drawing.Color.Transparent;
-            this.imgJug4.Image = global::JuegoDeLaOca.Resource1.FichaNegra1;
+            this.imgJug4.Image = global::JuegoDeLaOca.Resource1.FichaNegra;
             this.imgJug4.Location = new System.Drawing.Point(155, 507);
             this.imgJug4.Name = "imgJug4";
             this.imgJug4.Size = new System.Drawing.Size(119, 79);
@@ -123,6 +124,19 @@
             this.timer1.Interval = 800;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(846, 613);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(341, 51);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "-Juan Diego Londoño Ch\r\n-Santiago Cano Duque\r\n     Sistemas de Información y Orga" +
+    "nizaciones";
+            // 
             // Tablero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -130,6 +144,7 @@
             this.BackgroundImage = global::JuegoDeLaOca.Resource1.Tablero1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.imgJug4);
@@ -163,5 +178,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
     }
 }
