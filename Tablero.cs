@@ -26,17 +26,26 @@ namespace JuegoDeLaOca
         int[] Amarillos = new int[6] { 2, 7, 13, 20, 25, 29 };
         int[] Morados = new int[6] { 4, 10, 15, 17, 22, 26 };
         int[] Azules = new int[6] { 5, 8, 11, 18, 21, 28 };
+        int[] puentes = new int[6];
+        int[] resbalones = new int[6];
+        int[] calaveras = new int[6];
+        int[] posadas = new int[6];
+        int[] dados = new int[6];
+        int[] penalizaciones = new int[5] {8,8,8,8,8};
+        int it = 0;
 
         public Tablero(List<Jugador> jugadores)
         {
             InitializeComponent();
+            asignarPenalizaciones();
+            anadirPreguntas();
             numPlayers = jugadores.Count();
             this.jugadores = jugadores;
             imgJugador[0] = imgJug1;
             imgJugador[1] = imgJug2;
             imgJugador[2] = imgJug3;
             imgJugador[3] = imgJug4;
-            for(int i=0; i< 4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 imgJugador[i].Visible = false;
             }
@@ -44,6 +53,65 @@ namespace JuegoDeLaOca
             //jug1.Pos = 15;
             //jug1.mover();
             //imgJug1.Location = new Point(jug1.PosX, jug1.PosY);
+        }
+        void compararPenas(int[] vec, int n)
+        {
+            switch (n)
+            {
+                case 1:
+                    puentes = vec;
+                    break;
+                case 2:
+                    resbalones = vec;
+                    break;
+                case 3:
+                    calaveras = vec;
+                    break;
+                case 4:
+                    posadas = vec;
+                    break;
+                case 5:
+                    dados = vec;
+                    break;
+            }
+        }
+        void asignarPenalizaciones()
+        {
+            int n = rnd.Next(0, 5);
+            while (penalizaciones.Contains(n)) //Verdes
+            {
+                n = rnd.Next(0, 5);
+            }
+            penalizaciones[0] = n;
+            compararPenas(Verdes, n);
+            n = rnd.Next(0, 5);
+            while (penalizaciones.Contains(n)) //Naranjas
+            {
+                n = rnd.Next(0, 5);
+            }
+            penalizaciones[1] = n;
+            compararPenas(Naranjas, n);
+            n = rnd.Next(0, 5);
+            while (penalizaciones.Contains(n)) //Amarillos
+            {
+                n = rnd.Next(0, 5);
+            }
+            penalizaciones[2] = n;
+            compararPenas(Amarillos, n);
+            n = rnd.Next(0, 5);
+            while (penalizaciones.Contains(n)) //Morados
+            {
+                n = rnd.Next(0, 5);
+            }
+            penalizaciones[3] = n;
+            compararPenas(Morados, n);
+            n = rnd.Next(0, 5);
+            while (penalizaciones.Contains(n)) //Azules
+            {
+                n = rnd.Next(0, 5);
+            }
+            penalizaciones[4] = n;
+            compararPenas(Azules, n);
         }
 
         void siguienteTurno()
@@ -60,6 +128,7 @@ namespace JuegoDeLaOca
             }
             else
             {
+                timer1.Start();
                 puedeJugar = true;
             }
 
@@ -74,26 +143,27 @@ namespace JuegoDeLaOca
 
         void penalizar(int pos)
         {
-            if (Verdes.Contains(jugadores[turno - 1].Pos))
+            if (puentes.Contains(jugadores[turno - 1].Pos))
             {
                 puente(turno);
             }
-            else if (Naranjas.Contains(jugadores[turno - 1].Pos))
+            else if (posadas.Contains(jugadores[turno - 1].Pos))
             {
                 posada(turno);
             }
-            else if (Amarillos.Contains(jugadores[turno - 1].Pos))
+            else if (dados.Contains(jugadores[turno - 1].Pos))
             {
                 dado(turno);
             }
-            else if (Morados.Contains(jugadores[turno - 1].Pos))
+            else if (resbalones.Contains(jugadores[turno - 1].Pos))
             {
                 resbalon(turno);
             }
-            else //Azules
+            else //Calaveras
             {
                 calavera(turno);
             }
+            timer1.Start();
             puedeJugar = true;
         }
 
@@ -131,7 +201,7 @@ namespace JuegoDeLaOca
         void calavera(int turno)
         {
             MessageBox.Show("Aiooooos", "CALAVERA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            jugadores[turno - 1].Pos = 1;
+            jugadores[turno - 1].Pos = 0;
             jugadores[turno - 1].Penalizado = true;
             mover(turno);
         }
@@ -184,6 +254,8 @@ namespace JuegoDeLaOca
                 if (puedeJugar)
                 {
                     label1.Text = "Turno de: " + jugadores[turno - 1].Nombre;
+                    label2.Visible = false;
+                    timer1.Stop();
                     puedeJugar = false;
                     resultadoDado = rnd.Next(1, 7);
                     frmDice Dado = new frmDice(resultadoDado);
@@ -195,8 +267,8 @@ namespace JuegoDeLaOca
 
         void mostrarPregunta()
         {
-            BancoPreguntas.Add(new Question("¿Cuál es la correcta?", "Esta no", "Esta tampoco", "Esta sí", "Esta menos", "Esta no"));
-            Pregunta pregunta = new Pregunta(BancoPreguntas[0]);
+            int num = rnd.Next(0, BancoPreguntas.Count);
+            Pregunta pregunta = new Pregunta(BancoPreguntas[num]);
             pregunta.ShowDialog();
             if (pregunta.DialogResult == DialogResult.Yes)
             {
@@ -222,6 +294,8 @@ namespace JuegoDeLaOca
                 {
                     MessageBox.Show("Bien hecho");
                 }
+                //BancoPreguntas.RemoveAt(num);
+                timer1.Start();
                 puedeJugar = true;
                 siguienteTurno();
             }
@@ -254,6 +328,24 @@ namespace JuegoDeLaOca
             jugadores[turno - 1].Penalizado = true;
             jugadores[turno - 1].Pos -= resultadoDado;
             mover(turno);
+        }
+
+        void anadirPreguntas()
+        {
+            BancoPreguntas.Add(new Question("¿Cuál es la correcta?", "Esta no", "Esta tampoco", "Esta sí", "Esta menos", "Esta no"));
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            if(it % 2 == 0)
+            {
+                label2.Visible = false;
+            }
+            else
+            {
+                label2.Visible = true;
+            }
+            it++;
         }
     }
 }
